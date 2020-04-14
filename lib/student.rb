@@ -6,11 +6,11 @@ class Student
 
   def initialize(student_hash)
     #extract each piece of information from the hash
-    student_hash[:name]
+
     student_hash[:location]
     student_hash[:profile_url]
     #send this information to the corresponding attr accessor method
-    self.send(name=)
+    self.send(:name, student_hash[:name])
     @@all << self
   end
 
