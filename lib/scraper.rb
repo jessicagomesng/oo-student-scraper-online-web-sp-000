@@ -62,11 +62,12 @@ class Scraper
       link = social_links[index]
       social_profile[:blog] = link
     end 
-    #student_profile[:profile_quote] = profile.css(".profile-quote").text
+    
+    student_profile[:profile_quote] = profile.css(".profile-quote").text
 
-    #student_profile[:bio] = profile.css(".bio-content .description-holder p").text
+    student_profile[:bio] = profile.css(".bio-content .description-holder p").text
 
-    #student_profile
+    student_profile
 
   end
 
