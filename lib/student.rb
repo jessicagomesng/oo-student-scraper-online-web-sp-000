@@ -19,7 +19,6 @@ class Student
 
   def add_student_attributes(attributes_hash)
 
-    @@all << self 
 
   end
 
