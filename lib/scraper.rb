@@ -44,6 +44,9 @@ class Scraper
       social_links << social_link
     end
 
+    #if social_icons.any? { |link| link.downcase.include?("twitter") }
+
+
 
     #social_array = profile.css(".social-icon-container a").collect { |social| social.attribute("href").value }
     #social_icons = profile.css(".social-icon-container a img.social-icon"). collect { |social| social.attribute("src").value }
