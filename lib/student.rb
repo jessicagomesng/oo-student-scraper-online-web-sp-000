@@ -10,6 +10,7 @@ class Student
     #send this information to the corresponding attr accessor method
     self.send(:name=, student_hash[:name])
     self.send(:location=, student_hash[:location])
+    self.send(:profile_url=, student_hash[:profile_Url])
     @@all << self
   end
 
