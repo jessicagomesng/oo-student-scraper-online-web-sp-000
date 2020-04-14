@@ -23,7 +23,7 @@ class Student
 
     attributes_hash.each do |key, value|
       #iterate over the hash and assign the value of each key to the actual method
-      self.send(:key=, student_hash[:key])
+      self.send(:key=, value)
     end
 
   end
