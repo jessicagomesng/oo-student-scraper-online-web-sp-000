@@ -44,7 +44,7 @@ class Scraper
     end
 
     if social_icons.any? { |icon| icon.downcase.include?("twitter") }
-      social_icons.index { |icon| icon.include?("twitter") }
+      index = social_icons.index { |icon| icon.include?("twitter") }
 
 
     #social_array = profile.css(".social-icon-container a").collect { |social| social.attribute("href").value }
