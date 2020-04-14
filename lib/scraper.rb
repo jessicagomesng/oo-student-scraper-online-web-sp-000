@@ -29,6 +29,7 @@ class Scraper
     html = open(profile_url)
     profile = Nokogiri::HTML(html)
     student_profile = {}
+    binding.pry
 
     #iterate over the socials and return an array with the link for each social
     #create a new array with the socials, with the icon link => link
