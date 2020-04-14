@@ -44,16 +44,16 @@ class Scraper
 
     #if the Twitter exists
     if social_icons.any? { |link| link.downcase.include?("twitter") }
-      student_profile[:twitter] = social_array.select { |link| link.downcase.include?("twitter")}.join
+      student_profile[:twitter] = social_links.select { |link| link.downcase.include?("twitter")}.join
       #create a Twitter key with the link as the value
     end
 
     if social_icons.any? { |link| link.downcase.include?("linkedin") }
-      student_profile[:linkedin] = social_array.select { |link| link.downcase.include?("linkedin")}.join
+      student_profile[:linkedin] = social_links.select { |link| link.downcase.include?("linkedin")}.join
     end
 
     if social_icons.any? { |link| link.downcase.include?("github") }
-      student_profile[:github] = social_array.select { |link| link.downcase.include?("github")}.join
+      student_profile[:github] = social_links.select { |link| link.downcase.include?("github")}.join
     end
 
     if social_icons.any? { |icon| icon.downcase.include?("rss") }
