@@ -59,7 +59,7 @@ class Scraper
     if social_icons.any? { |icon| icon.downcase.include?("rss") }
       index = social_icons.index { |icon| icon.include?("rss") }
       link = social_links[index]
-      social_profile[:blog] = link
+      student_profile[:blog] = link
     end
 
     student_profile[:profile_quote] = profile.css(".profile-quote").text
