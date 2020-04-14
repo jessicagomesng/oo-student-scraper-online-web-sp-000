@@ -32,7 +32,7 @@ class Scraper
 
     #iterate over the socials and return an array with the link for each social
     #create a new array with the socials, with the icon link => link
-        student_profile = {}
+    student_profile = {}
     social_icons = []
     social_links = []
 
@@ -44,8 +44,7 @@ class Scraper
     end
 
     if social_icons.any? { |icon| icon.downcase.include?("twitter") }
-      student_profile[:twitter] = social_array.select { |link| link.downcase.include?("twitter")}.join
-
+      social_icons.index { |icon| icon.include?("twitter") }
 
 
     #social_array = profile.css(".social-icon-container a").collect { |social| social.attribute("href").value }
