@@ -32,6 +32,7 @@ class Scraper
 
     #iterate over the socials and return an array with the link for each social
     #create a new array with the socials, with the icon link => link
+        student_profile = {}
     social_icons = []
     social_links = []
 
