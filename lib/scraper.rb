@@ -28,7 +28,6 @@ class Scraper
 
     html = open(profile_url)
     profile = Nokogiri::HTML(html)
-    binding.pry
 
     #iterate over the socials and return an array with the link for each social
     #create a new array with the socials, with the icon link => link
@@ -74,11 +73,3 @@ class Scraper
 end
 
 Scraper.scrape_profile_page("https://learn-co-curriculum.github.io/student-scraper-test-page/students/ryan-johnson.html")
-
-#grab each social section: doc.css(".social-icon-container a")[index]
-#Twitter, Linkedin, Github, Youtube
-#link for twitter: doc.css(".social-icon-container a")[index].attribute("href").value
-#profile quote: doc.css(".profile-quote").text
-#bio: doc.css(".bio-content .description-holder p").text
-
-#icon = profile.css(".social_icon_container a img.social-icon")
