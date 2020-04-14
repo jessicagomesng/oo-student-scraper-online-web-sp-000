@@ -34,7 +34,8 @@ class Scraper
     #iterate over the socials and return an array with the link for each social
     #create a new array with the socials, with the icon link => link
 
-    social_hash = {}
+    social_icons = []
+    social_links = []
     profile.css(".social-icon-container a").each do | social|
       social_icon = social.css("img.social-icon").attribute("src").value
       social_link = social.attribute("href").value
