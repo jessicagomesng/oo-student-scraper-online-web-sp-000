@@ -5,8 +5,13 @@ class Student
   @@all = []
 
   def initialize(student_hash)
-
-    @@all << self 
+    #extract each piece of information from the hash
+    student_hash[:name]
+    student_hash[:location]
+    student_hash[:profile_url]
+    #send this information to the corresponding attr accessor method
+    self.send(name=)
+    @@all << self
   end
 
   def self.create_from_collection(students_array)
