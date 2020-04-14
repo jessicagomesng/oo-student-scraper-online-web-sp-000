@@ -38,6 +38,7 @@ class Scraper
     social_links = []
     profile.css(".social-icon-container a").each do | social|
       social_icon = social.css("img.social-icon").attribute("src").value
+      social_icons << social_icon
       social_link = social.attribute("href").value
       social_hash[:social_icon] = social_link
     end
