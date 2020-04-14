@@ -28,12 +28,10 @@ class Scraper
 
     html = open(profile_url)
     profile = Nokogiri::HTML(html)
-    student_profile = {}
     binding.pry
 
     #iterate over the socials and return an array with the link for each social
     #create a new array with the socials, with the icon link => link
-
     social_icons = []
     social_links = []
 
@@ -45,6 +43,7 @@ class Scraper
     end
 
     if social_icons.any? { |icon| icon.downcase.include?("twitter") }
+      student_profile[:twitter] = social_array.select { |link| link.downcase.include?("twitter")}.join
 
 
 
@@ -54,7 +53,6 @@ class Scraper
     #if the Twitter exists
     #if social_icons.any? { |link| link.downcase.include?("twitter") }
       #create a Twitter key with the link as the value
-      #student_profile[:twitter] = social_array.select { |link| link.downcase.include?("twitter")}.join
     #end
 
     #if social_icons.any? { |link| link.downcase.include?("linkedin") }
