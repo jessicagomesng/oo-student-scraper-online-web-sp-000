@@ -53,6 +53,10 @@ class Scraper
       student_profile[:linkedin] = social_array.select { |link| link.downcase.include?("linkedin")}.join
     end
 
+    #if social_icons.any? { |link| link.downcase.include?("github") }
+    #  student_profile[:github] = social_array.select { |link| link.downcase.include?("github")}.join
+    #end
+
     if social_icons.any? { |icon| icon.downcase.include?("rss") }
       index = social_icons.index { |icon| icon.include?("rss") }
       link = social_links[index]
@@ -62,9 +66,7 @@ class Scraper
 
 
 
-    #if social_icons.any? { |link| link.downcase.include?("github") }
-    #  student_profile[:github] = social_array.select { |link| link.downcase.include?("github")}.join
-    #end
+
 
     #if social_icons.any? { |link| link.downcase.include?("rss") }
     #  student_profile[:blog] = social_array.select { |link| link.downcase.include?("github")}.join
