@@ -14,7 +14,7 @@ class Student
   def self.create_from_collection(students_array)
 
     students_array.each do |student|
-      student = Student.new
+      student = Student.new(student)
     end
 
   end
@@ -31,5 +31,5 @@ class Student
   def self.all
     @@all
   end
-  
+
 end
