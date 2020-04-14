@@ -44,7 +44,7 @@ class Scraper
       social_links << social_link
     end
 
-    #if social_icons.any? { |icon| icon.downcase.include?("twitter") }
+    if social_icons.any? { |icon| icon.downcase.include?("twitter") }
 
 
 
