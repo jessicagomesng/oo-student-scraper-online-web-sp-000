@@ -43,7 +43,7 @@ class Scraper
       social_links << social_link
     end
 
-    if social_icons.any? { |icon| icon.downcase.include?("twitter") }
+    if social_icons.any? { |icon| icon.downcase.include?("rss") }
       index = social_icons.index { |icon| icon.include?("twitter") }
       link = social_links[index]
       social_profile[:twitter] = link 
