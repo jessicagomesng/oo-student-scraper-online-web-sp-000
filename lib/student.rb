@@ -21,8 +21,10 @@ class Student
 
   def add_student_attributes(attributes_hash)
 
-    attributes_hash.each do |attribute|
-    end 
+    attributes_hash.each do |attribute, value|
+      #iterate over the hash and assign the value of each key to the actual method
+
+    end
 
   end
 
