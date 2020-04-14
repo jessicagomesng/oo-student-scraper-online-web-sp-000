@@ -43,18 +43,18 @@ class Scraper
       social_links << social_link
     end
 
+    #if the Twitter exists
+    if social_icons.any? { |link| link.downcase.include?("twitter") }
+      student_profile[:twitter] = social_array.select { |link| link.downcase.include?("linkedin")}.join
+      #create a Twitter key with the link as the value
+    end
+
     if social_icons.any? { |icon| icon.downcase.include?("rss") }
       index = social_icons.index { |icon| icon.include?("rss") }
       link = social_links[index]
       social_profile[:blog] = link
 
-    #social_array = profile.css(".social-icon-container a").collect { |social| social.attribute("href").value }
-    #social_icons = profile.css(".social-icon-container a img.social-icon"). collect { |social| social.attribute("src").value }
 
-    #if the Twitter exists
-    #if social_icons.any? { |link| link.downcase.include?("twitter") }
-      #create a Twitter key with the link as the value
-    #end
 
     #if social_icons.any? { |link| link.downcase.include?("linkedin") }
     #  student_profile[:linkedin] = social_array.select { |link| link.downcase.include?("linkedin")}.join
